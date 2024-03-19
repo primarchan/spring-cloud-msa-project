@@ -1,0 +1,5 @@
+### MY-FIRST-SERVICE 테스트
+GET http://localhost:8000/first-service/check
+
+### MY-SECOND-SERVICE 테스트
+GET http://localhost:8000/first-second/check
