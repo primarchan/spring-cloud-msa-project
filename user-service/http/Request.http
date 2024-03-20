@@ -1,9 +1,15 @@
 ### 사용자 정보 등록 API
-POST http://localhost:62916/users
+POST http://localhost:8000/user-service/users
 Content-Type: application/json
 
 {
-  "email": "primarchan@gmail.com",
-  "name": "Kevin An",
+  "email": "primarchan@naver.com",
+  "name": "Primarch An",
   "password": "1111"
 }
+
+### 전체 사용자 정보 조회
+GET http://localhost:8000/user-service/users
+
+### 사용자 정보 조회
+GET http://localhost:8000/user-service/users/f9b196ac-2df8-4c39-a217-c9d61a5a6926

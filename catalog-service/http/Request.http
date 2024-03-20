@@ -1,0 +1,2 @@
+### 전체 상품 목록 조회
+GET http://localhost:8000/catalog-service/catalogs
