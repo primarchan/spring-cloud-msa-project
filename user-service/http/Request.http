@@ -1,0 +1,9 @@
+### 사용자 정보 등록 API
+POST http://localhost:62916/users
+Content-Type: application/json
+
+{
+  "email": "primarchan@gmail.com",
+  "name": "Kevin An",
+  "password": "1111"
+}

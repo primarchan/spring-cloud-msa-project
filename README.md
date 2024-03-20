@@ -1,9 +1,9 @@
-# SPRING CLOUD 기반 MICROSERVICE ARCHITECTURE 프로젝트
+# Spring Cloud 기반 Microservice Architecture 프로젝트
 
 ## TECH-STACK
 - Spring Cloud 2023.0.0
 - Spring Cloud Gateway
-- Spring Boot 3.2.2
+- Spring Boot 3.2.3
 - Netflix Eureka Server
 - Spring Data JPA
 - Spring Security 6.2.3
