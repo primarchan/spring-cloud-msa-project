@@ -2,8 +2,9 @@ package com.primarchan.userservice.service;
 
 import com.primarchan.userservice.dto.UserDto;
 import com.primarchan.userservice.entity.UserEntity;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
-public interface UserService {
+public interface UserService extends UserDetailsService {
 
     UserDto createUser(UserDto userDto);
 
@@ -11,4 +12,5 @@ public interface UserService {
 
     Iterable<UserEntity> getUserByAll();
 
+    UserDto getUserDetailsByEmail(String email);
 }

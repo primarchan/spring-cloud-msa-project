@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
   "email": "primarchan@naver.com",
-  "name": "Primarch An",
+  "name": "Kevin An",
   "password": "1111"
 }
 
@@ -13,3 +13,12 @@ GET http://localhost:8000/user-service/users
 
 ### 사용자 정보 조회
 GET http://localhost:8000/user-service/users/f9b196ac-2df8-4c39-a217-c9d61a5a6926
+
+### 사용자 로그인 요청
+POST http://localhost:8000/user-service/login
+Content-Type: application/json
+
+{
+  "email": "primarchan@naver.com",
+  "password": "1111"
+}
