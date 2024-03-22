@@ -14,9 +14,11 @@ Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI0YzA5ZTE0Yi0xYzE5LTQ1NjMtO
 
 ### 전체 사용자 정보 조회
 GET http://localhost:8000/user-service/users
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI0YzA5ZTE0Yi0xYzE5LTQ1NjMtOGM5Zi0xOTkyNzhjMGViOGEiLCJleHAiOjE3MTExMDA4MTAsImlhdCI6MTcxMTAxNDQxMH0.VlyqZ5NbGThf9ek1DI82uTVTdnEjuKuKC9D0tKVLu6XXErgbAxQp1sCFp3D5e24R
 
 ### 사용자 정보 조회
-GET http://localhost:8000/user-service/users/f9b196ac-2df8-4c39-a217-c9d61a5a6926
+GET http://localhost:8000/user-service/users/4c09e14b-1c19-4563-8c9f-199278c0eb8a
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI0YzA5ZTE0Yi0xYzE5LTQ1NjMtOGM5Zi0xOTkyNzhjMGViOGEiLCJleHAiOjE3MTExMDA4MTAsImlhdCI6MTcxMTAxNDQxMH0.VlyqZ5NbGThf9ek1DI82uTVTdnEjuKuKC9D0tKVLu6XXErgbAxQp1sCFp3D5e24R
 
 ### 사용자 로그인 요청
 POST http://localhost:8000/user-service/login
@@ -42,3 +44,12 @@ Content-Type: application/json
 
 ### 사용자 전체 주문 조회
 GET http://localhost:8000/order-service/f9b196ac-2df8-4c39-a217-c9d61a5a6926/orders
+
+### API GATEWAY Actuator health 상태 요청
+GET http://localhost:8000/actuator/health
+
+### USER-SEEVICE Actuator health 상태 요청
+GET http://localhost:8000/user-service/actuator/health
+
+### USER-SEEVICE Actuator refresh 요청
+POST http://localhost:8000/user-service/actuator/refresh
