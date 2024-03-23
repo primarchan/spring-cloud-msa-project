@@ -10,15 +10,15 @@ Content-Type: application/json
 
 ### user-service 접속 테스트
 GET http://localhost:8000/user-service/welcome
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI0YzA5ZTE0Yi0xYzE5LTQ1NjMtOGM5Zi0xOTkyNzhjMGViOGEiLCJleHAiOjE3MTExMDA4MTAsImlhdCI6MTcxMTAxNDQxMH0.VlyqZ5NbGThf9ek1DI82uTVTdnEjuKuKC9D0tKVLu6XXErgbAxQp1sCFp3D5e24R
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiIzOGJmYWM2Yy0xMmQ4LTQzZTgtYWYxMS1iMWI5NTZhNzZlNmUiLCJleHAiOjE3MTEyNjc2MTMsImlhdCI6MTcxMTE4MTIxM30.kMSsAmWNNfOslhm6HTKFuJggEFvc0It9vCxSjnIP__wGV9OF4q42y2hOtxTYoSxx
 
 ### 전체 사용자 정보 조회
 GET http://localhost:8000/user-service/users
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI0YzA5ZTE0Yi0xYzE5LTQ1NjMtOGM5Zi0xOTkyNzhjMGViOGEiLCJleHAiOjE3MTExMDA4MTAsImlhdCI6MTcxMTAxNDQxMH0.VlyqZ5NbGThf9ek1DI82uTVTdnEjuKuKC9D0tKVLu6XXErgbAxQp1sCFp3D5e24R
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJiNzJjNTllYy05NGRmLTQzZjEtYTliMS04ZTQ0NjY0ZjdhMjEiLCJleHAiOjE3MTEyNjk4MTUsImlhdCI6MTcxMTE4MzQxNX0.p9I0Y5DO5uFKhNKRi96r79pPwz6l0bOFfKnO5ha5pnuKgd8CcQLSIXcvnC-QIrLq
 
 ### 사용자 정보 조회
-GET http://localhost:8000/user-service/users/4c09e14b-1c19-4563-8c9f-199278c0eb8a
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI0YzA5ZTE0Yi0xYzE5LTQ1NjMtOGM5Zi0xOTkyNzhjMGViOGEiLCJleHAiOjE3MTExMDA4MTAsImlhdCI6MTcxMTAxNDQxMH0.VlyqZ5NbGThf9ek1DI82uTVTdnEjuKuKC9D0tKVLu6XXErgbAxQp1sCFp3D5e24R
+GET http://localhost:8000/user-service/users/b72c59ec-94df-43f1-a9b1-8e44664f7a21
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJiNzJjNTllYy05NGRmLTQzZjEtYTliMS04ZTQ0NjY0ZjdhMjEiLCJleHAiOjE3MTEyNjk4MTUsImlhdCI6MTcxMTE4MzQxNX0.p9I0Y5DO5uFKhNKRi96r79pPwz6l0bOFfKnO5ha5pnuKgd8CcQLSIXcvnC-QIrLq
 
 ### 사용자 로그인 요청
 POST http://localhost:8000/user-service/login
@@ -53,3 +53,6 @@ GET http://localhost:8000/user-service/actuator/health
 
 ### USER-SEEVICE Actuator refresh 요청
 POST http://localhost:8000/user-service/actuator/refresh
+
+### Spring Cloud Bus 를 통한 Actuator refresh 요청
+POST http://localhost:8000/user-service/actuator/busrefresh

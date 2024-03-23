@@ -70,9 +70,9 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
         Date expirationDate = Date.from(now.plusMillis(Long.parseLong(Objects.requireNonNull(env.getProperty("token.expiration_time")))));
 
         String token = Jwts.builder()
-                .subject(userDto.getUserId())
-                .expiration(expirationDate)
-                .issuedAt(Date.from(now))
+                .setSubject(userDto.getUserId())
+                .setExpiration(expirationDate)
+                .setIssuedAt(Date.from(now))
                 .signWith(secretKey)
                 .compact();
 

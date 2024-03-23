@@ -62,6 +62,7 @@ public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<Auth
     }
 
     private boolean isJwtValid(String jwt) {
+        String tokenSecret = env.getProperty("token.secret");
         byte[] secretKeyBytes = Base64.getEncoder().encode(Objects.requireNonNull(env.getProperty("token.secret")).getBytes());
         SecretKey signingKey = Keys.hmacShaKeyFor(secretKeyBytes);
 
@@ -69,7 +70,7 @@ public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<Auth
         String subject = null;
 
         try {
-            JwtParser jwtParser = Jwts.parser()
+            JwtParser jwtParser = Jwts.parserBuilder()
                     .setSigningKey(signingKey)
                     .build();
 
