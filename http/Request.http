@@ -14,11 +14,11 @@ Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiIzOGJmYWM2Yy0xMmQ4LTQzZTgtY
 
 ### 전체 사용자 정보 조회
 GET http://localhost:8000/user-service/users
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJiNzJjNTllYy05NGRmLTQzZjEtYTliMS04ZTQ0NjY0ZjdhMjEiLCJleHAiOjE3MTEyNjk4MTUsImlhdCI6MTcxMTE4MzQxNX0.p9I0Y5DO5uFKhNKRi96r79pPwz6l0bOFfKnO5ha5pnuKgd8CcQLSIXcvnC-QIrLq
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiIwNGMwNWYyYS1kMTI2LTQzZDEtOGMxMy0xMmU0MTA3Y2I2NTIiLCJleHAiOjE3MTE3Mjk0MjUsImlhdCI6MTcxMTY0MzAyNX0.1XV1aZLELD6-D07Bjnls99ARnkYIJncM5_Jv3Dm_6oL5ufT4RIcaUBDlxDWv6GpT
 
 ### 사용자 정보 조회
-GET http://localhost:8000/user-service/users/b72c59ec-94df-43f1-a9b1-8e44664f7a21
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJiNzJjNTllYy05NGRmLTQzZjEtYTliMS04ZTQ0NjY0ZjdhMjEiLCJleHAiOjE3MTEyNjk4MTUsImlhdCI6MTcxMTE4MzQxNX0.p9I0Y5DO5uFKhNKRi96r79pPwz6l0bOFfKnO5ha5pnuKgd8CcQLSIXcvnC-QIrLq
+GET http://localhost:8000/user-service/users/04c05f2a-d126-43d1-8c13-12e4107cb652
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiIwNGMwNWYyYS1kMTI2LTQzZDEtOGMxMy0xMmU0MTA3Y2I2NTIiLCJleHAiOjE3MTE3Mjk0MjUsImlhdCI6MTcxMTY0MzAyNX0.1XV1aZLELD6-D07Bjnls99ARnkYIJncM5_Jv3Dm_6oL5ufT4RIcaUBDlxDWv6GpT
 
 ### 사용자 로그인 요청
 POST http://localhost:8000/user-service/login
@@ -56,3 +56,15 @@ POST http://localhost:8000/user-service/actuator/refresh
 
 ### Spring Cloud Bus 를 통한 Actuator refresh 요청
 POST http://localhost:8000/user-service/actuator/busrefresh
+
+### 대칭키를 이용한 암호화 요청
+POST http://localhost:8888/encrypt
+Content-Type: text/plain
+
+D9qQQvKlg9b_WD_Q0SrvL8hlbELu9MiLobrK5AvadOo=
+
+### 대칭키를 이용한 복호화 요청
+POST http://localhost:8888/decrypt
+Content-Type: text/plain
+
+AYAw/aOxc8S5jSeIpVrku7x4BHDpAE0ELNqe+BvCkx3SndLo+uOl3VaPqqFz4RJdGGjCjTde3F1KZRTFNfOYpBQunkqnyCvwsZigJ4Qx9NIloJU2SaizwQFQVf5BV/KfXemSSPPi4F+nQIz2cDEgbCx3+RQmsNAmHeFJ4vtBTS8cFWFe+YUJWYOUR0KVRU+xDUceFXSMfIKFZ7OI491EKDJmxxYmRw5rro0jpfkYCjeyspNHWn533AETShlGox6gaCcwn+suv5y+K+u7lRKrjBMmwsdHNywNS1OsYnAOk/YXSIHlQmjJxP6UoLQXMDdOy6HvxhBRfNd24ZEMOmeUsYexTCbxLziJdFufX/h+heeVrORUjSzUBJ8ebZB1X2jpQ+WDU6M891mK35AMJx5c6In2zMpSEmsTX6KtYdGrwZRerod/Vp0T5Zz9luz7HmKBmwPuq2q+UoaSYers2ueCTzspgTxv4olxfMXbmIB/nzHvhRlVwWUlHicFC0rnWLtHLjnIOvDkCB87Z7IFsLsikX6H6IgocLQipII5OikPzmq3ltnPD+y4vZOo9EgOunDN3DehCG7uyFIjHCIvufb6EaWO
