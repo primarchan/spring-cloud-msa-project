@@ -10,15 +10,15 @@ Content-Type: application/json
 
 ### user-service 접속 테스트
 GET http://localhost:8000/user-service/welcome
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiIzOGJmYWM2Yy0xMmQ4LTQzZTgtYWYxMS1iMWI5NTZhNzZlNmUiLCJleHAiOjE3MTEyNjc2MTMsImlhdCI6MTcxMTE4MTIxM30.kMSsAmWNNfOslhm6HTKFuJggEFvc0It9vCxSjnIP__wGV9OF4q42y2hOtxTYoSxx
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJiOGZiOTI2NC02MTY1LTQwN2YtYmMwZS04MmFmZDNlYmY0YzEiLCJleHAiOjE3MTI4NDc0NTcsImlhdCI6MTcxMjc2MTA1N30.DW0mLXVzfedBU0D7GWsIhQk7ap37ZTFaaRkkZOyZEHqEWQ0NRNXXtTGafCL2xnJW
 
 ### 전체 사용자 정보 조회
 GET http://localhost:8000/user-service/users
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiIwNGMwNWYyYS1kMTI2LTQzZDEtOGMxMy0xMmU0MTA3Y2I2NTIiLCJleHAiOjE3MTE3Mjk0MjUsImlhdCI6MTcxMTY0MzAyNX0.1XV1aZLELD6-D07Bjnls99ARnkYIJncM5_Jv3Dm_6oL5ufT4RIcaUBDlxDWv6GpT
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI2YjhiNTJiYi0zZDBmLTQxMGYtYjVkOC1hNWExMmMzNzdhNjEiLCJleHAiOjE3MTI4NDYyMDQsImlhdCI6MTcxMjc1OTgwNH0.1SsxJHsA2yWbJojg37mFI33ipt8f86L-H0HRGyUE-_o7ZCry4rSnRfx_Qt-_NuKD
 
 ### 사용자 정보 조회
-GET http://localhost:8000/user-service/users/04c05f2a-d126-43d1-8c13-12e4107cb652
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiIwNGMwNWYyYS1kMTI2LTQzZDEtOGMxMy0xMmU0MTA3Y2I2NTIiLCJleHAiOjE3MTE3Mjk0MjUsImlhdCI6MTcxMTY0MzAyNX0.1XV1aZLELD6-D07Bjnls99ARnkYIJncM5_Jv3Dm_6oL5ufT4RIcaUBDlxDWv6GpT
+GET http://localhost:8000/user-service/users/6ae9455e-d009-4842-8189-ab8aac3fb181
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI2YWU5NDU1ZS1kMDA5LTQ4NDItODE4OS1hYjhhYWMzZmIxODEiLCJleHAiOjE3MTI4NDc2NzgsImlhdCI6MTcxMjc2MTI3OH0.nni29XFmcJP7eRq9xBKIhjnFPvf-_i10bPr9ChAkk3m93LISkPuLlwyQMnfXgKt_
 
 ### 사용자 로그인 요청
 POST http://localhost:8000/user-service/login
@@ -33,7 +33,7 @@ Content-Type: application/json
 GET http://localhost:8000/catalog-service/catalogs
 
 ### 주문 생성
-POST http://localhost:8000/order-service/f9b196ac-2df8-4c39-a217-c9d61a5a6926/orders
+POST http://localhost:8000/order-service/90958a27-5289-4743-b136-0060adc5be17/orders
 Content-Type: application/json
 
 {
@@ -43,7 +43,7 @@ Content-Type: application/json
 }
 
 ### 사용자 전체 주문 조회
-GET http://localhost:8000/order-service/f9b196ac-2df8-4c39-a217-c9d61a5a6926/orders
+GET http://localhost:8000/order-service/90958a27-5289-4743-b136-0060adc5be17/orders
 
 ### API GATEWAY Actuator health 상태 요청
 GET http://localhost:8000/actuator/health

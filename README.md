@@ -17,7 +17,11 @@
 - Lombok
 - IntelliJ IDEA 2023.3.5 (Ultimate Edition)
 - macOS Sonoma 14.4(23E214) 
-- Apple M1
+- Apple MacBook M1
+
+## RabbitMQ 실행 가이드
+- `cd /usr/local/sbin`
+- `./rabbitmaq-sever`
 
 ## REFERENCE
 - 스프링 마이크로서비스 코딩 공작소 개정 2판 (SPRING MICROSERVICES IN ACTION 2ND ED.)
