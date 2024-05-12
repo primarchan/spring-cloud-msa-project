@@ -49,6 +49,7 @@ public class WebSecurityConfig {
                                 .requestMatchers(new AntPathRequestMatcher("/actuator/**")).permitAll()
                                 .requestMatchers(new AntPathRequestMatcher("/h2-console/**")).permitAll()
                                 .requestMatchers(new AntPathRequestMatcher("/users", "POST")).permitAll()
+                                .requestMatchers(new AntPathRequestMatcher("/users/**", "GET")).permitAll()
                                 .requestMatchers("/**").access(
                                         new WebExpressionAuthorizationManager("hasIpAddress('127.0.0.1') or hasIpAddress('172.30.1.68')"))
                                 .anyRequest().authenticated()

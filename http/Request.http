@@ -8,17 +8,13 @@ Content-Type: application/json
   "password": "1111"
 }
 
-### user-service 접속 테스트
-GET http://localhost:8000/user-service/welcome
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJiOGZiOTI2NC02MTY1LTQwN2YtYmMwZS04MmFmZDNlYmY0YzEiLCJleHAiOjE3MTI4NDc0NTcsImlhdCI6MTcxMjc2MTA1N30.DW0mLXVzfedBU0D7GWsIhQk7ap37ZTFaaRkkZOyZEHqEWQ0NRNXXtTGafCL2xnJW
-
 ### 전체 사용자 정보 조회
 GET http://localhost:8000/user-service/users
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI2YjhiNTJiYi0zZDBmLTQxMGYtYjVkOC1hNWExMmMzNzdhNjEiLCJleHAiOjE3MTI4NDYyMDQsImlhdCI6MTcxMjc1OTgwNH0.1SsxJHsA2yWbJojg37mFI33ipt8f86L-H0HRGyUE-_o7ZCry4rSnRfx_Qt-_NuKD
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiIwOWUwM2NlMy1iNzA2LTRlN2EtODE5NC04MGI0NjA5NzE1MzQiLCJleHAiOjE3MTI5MDk4OTUsImlhdCI6MTcxMjgyMzQ5NX0.h7j_SHPguONNEBq6gkq6Gk7PrX00mc7FOGYSCrM1F4-ny7wsC2gIO8h8lctOd84D
 
 ### 사용자 정보 조회
-GET http://localhost:8000/user-service/users/6ae9455e-d009-4842-8189-ab8aac3fb181
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI2YWU5NDU1ZS1kMDA5LTQ4NDItODE4OS1hYjhhYWMzZmIxODEiLCJleHAiOjE3MTI4NDc2NzgsImlhdCI6MTcxMjc2MTI3OH0.nni29XFmcJP7eRq9xBKIhjnFPvf-_i10bPr9ChAkk3m93LISkPuLlwyQMnfXgKt_
+GET http://localhost:8000/user-service/users/a686eed8-7132-4964-927d-ac78edb20bbb
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiIwOWUwM2NlMy1iNzA2LTRlN2EtODE5NC04MGI0NjA5NzE1MzQiLCJleHAiOjE3MTI5MDk4OTUsImlhdCI6MTcxMjgyMzQ5NX0.h7j_SHPguONNEBq6gkq6Gk7PrX00mc7FOGYSCrM1F4-ny7wsC2gIO8h8lctOd84D
 
 ### 사용자 로그인 요청
 POST http://localhost:8000/user-service/login
@@ -33,17 +29,17 @@ Content-Type: application/json
 GET http://localhost:8000/catalog-service/catalogs
 
 ### 주문 생성
-POST http://localhost:8000/order-service/90958a27-5289-4743-b136-0060adc5be17/orders
+POST http://localhost:8000/order-service/f36a31d8-7364-4385-b219-efebdb69d759/orders
 Content-Type: application/json
 
 {
-  "productId": "CATALOG-002",
+  "productId": "CATALOG-003",
   "qty": 5,
   "unitPrice": 1000
 }
 
 ### 사용자 전체 주문 조회
-GET http://localhost:8000/order-service/90958a27-5289-4743-b136-0060adc5be17/orders
+GET http://localhost:8000/order-service/f36a31d8-7364-4385-b219-efebdb69d759/orders
 
 ### API GATEWAY Actuator health 상태 요청
 GET http://localhost:8000/actuator/health

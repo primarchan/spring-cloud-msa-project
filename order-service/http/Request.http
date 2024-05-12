@@ -10,3 +10,53 @@ Content-Type: application/json
 
 ### 사용자 전체 주문 조회
 GET http://localhost:8000/order-service/f9b196ac-2df8-4c39-a217-c9d61a5a6926/orders
+
+### Kafka Source Connect 등록
+POST 127.0.0.1:8083/connectors
+Content-Type: application/json
+
+{
+  "name" : "my-source-connect",
+  "config" : {
+    "connector.class" : "io.confluent.connect.jdbc.JdbcSourceConnector",
+    "connection.url":"jdbc:mysql://localhost:3306/mydb",
+    "connection.user":"root",
+    "connection.password":"1111",
+    "mode": "incrementing",
+    "incrementing.column.name" : "id",
+    "table.whitelist":"users",
+    "topic.prefix" : "my_topic_",
+    "tasks.max" : "1",
+    "poll.interval.ms": 10000,
+    "topic.creation.default.replication.factor": 1,
+    "topic.creation.default.partitions": 1
+  }
+}
+
+### Kafka Source Connect 삭제
+DELETE 127.0.0.1:8083/connectors/my-source-connect
+
+### Kafka Source Connect 조회
+GET 127.0.0.1:8083/connectors
+
+### Kafka Source Connect 세부 조회
+GET 127.0.0.1:8083/connectors/my-source-connect/status
+
+### Kafka Sink Connect 등록
+POST 127.0.0.1:8083/connectors
+Content-Type: application/json
+
+{
+  "name":"my-sink-connect",
+  "config":{
+    "connector.class":"io.confluent.connect.jdbc.JdbcSinkConnector",
+    "connection.url":"jdbc:mysql://localhost:3306/mydb",
+    "connection.user":"root",
+    "connection.password":"1111",
+    "auto.create":"true",
+    "auto.evolve":"true",
+    "delete.enabled":"false",
+    "tasks.max":"1",
+    "topics":"my_topic_users"
+  }
+}
