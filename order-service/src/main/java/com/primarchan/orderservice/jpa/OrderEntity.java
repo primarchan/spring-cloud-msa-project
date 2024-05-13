@@ -3,8 +3,11 @@ package com.primarchan.orderservice.jpa;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.io.Serializable;
+import java.sql.Date;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 @Table(name = "orders")

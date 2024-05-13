@@ -21,7 +21,7 @@
 
 ## RabbitMQ 실행 가이드
 - `cd /usr/local/sbin`
-- `./rabbitmaq-sever`
+- `./rabbitmq-sever`
 
 ## REFERENCE
 - 스프링 마이크로서비스 코딩 공작소 개정 2판 (SPRING MICROSERVICES IN ACTION 2ND ED.)

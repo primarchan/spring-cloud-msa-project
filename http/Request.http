@@ -10,11 +10,11 @@ Content-Type: application/json
 
 ### 전체 사용자 정보 조회
 GET http://localhost:8000/user-service/users
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiIwOWUwM2NlMy1iNzA2LTRlN2EtODE5NC04MGI0NjA5NzE1MzQiLCJleHAiOjE3MTI5MDk4OTUsImlhdCI6MTcxMjgyMzQ5NX0.h7j_SHPguONNEBq6gkq6Gk7PrX00mc7FOGYSCrM1F4-ny7wsC2gIO8h8lctOd84D
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI1YjMzMjkxMi1mMTUxLTRlNzItYmEyNS01YTU1ZTY2YjVhYmEiLCJleHAiOjE3MTU1OTY5NzQsImlhdCI6MTcxNTUxMDU3NH0.ngEDbMYDYZRv2kGSPnN25aHScH1fTAagItkSZq0q9N5nTe1HnbvcNLCVV96lOqFt
 
 ### 사용자 정보 조회
-GET http://localhost:8000/user-service/users/a686eed8-7132-4964-927d-ac78edb20bbb
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiIwOWUwM2NlMy1iNzA2LTRlN2EtODE5NC04MGI0NjA5NzE1MzQiLCJleHAiOjE3MTI5MDk4OTUsImlhdCI6MTcxMjgyMzQ5NX0.h7j_SHPguONNEBq6gkq6Gk7PrX00mc7FOGYSCrM1F4-ny7wsC2gIO8h8lctOd84D
+GET http://localhost:8000/user-service/users/5b332912-f151-4e72-ba25-5a55e66b5aba
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI1YjMzMjkxMi1mMTUxLTRlNzItYmEyNS01YTU1ZTY2YjVhYmEiLCJleHAiOjE3MTU1OTY5NzQsImlhdCI6MTcxNTUxMDU3NH0.ngEDbMYDYZRv2kGSPnN25aHScH1fTAagItkSZq0q9N5nTe1HnbvcNLCVV96lOqFt
 
 ### 사용자 로그인 요청
 POST http://localhost:8000/user-service/login
@@ -29,17 +29,17 @@ Content-Type: application/json
 GET http://localhost:8000/catalog-service/catalogs
 
 ### 주문 생성
-POST http://localhost:8000/order-service/f36a31d8-7364-4385-b219-efebdb69d759/orders
+POST http://localhost:8000/order-service/5b332912-f151-4e72-ba25-5a55e66b5aba/orders
 Content-Type: application/json
 
 {
-  "productId": "CATALOG-003",
-  "qty": 5,
+  "productId": "CATALOG-0002",
+  "qty": 11,
   "unitPrice": 1000
 }
 
 ### 사용자 전체 주문 조회
-GET http://localhost:8000/order-service/f36a31d8-7364-4385-b219-efebdb69d759/orders
+GET http://localhost:8000/order-service/5b332912-f151-4e72-ba25-5a55e66b5aba/orders
 
 ### API GATEWAY Actuator health 상태 요청
 GET http://localhost:8000/actuator/health
@@ -63,4 +63,79 @@ D9qQQvKlg9b_WD_Q0SrvL8hlbELu9MiLobrK5AvadOo=
 POST http://localhost:8888/decrypt
 Content-Type: text/plain
 
-AYAw/aOxc8S5jSeIpVrku7x4BHDpAE0ELNqe+BvCkx3SndLo+uOl3VaPqqFz4RJdGGjCjTde3F1KZRTFNfOYpBQunkqnyCvwsZigJ4Qx9NIloJU2SaizwQFQVf5BV/KfXemSSPPi4F+nQIz2cDEgbCx3+RQmsNAmHeFJ4vtBTS8cFWFe+YUJWYOUR0KVRU+xDUceFXSMfIKFZ7OI491EKDJmxxYmRw5rro0jpfkYCjeyspNHWn533AETShlGox6gaCcwn+suv5y+K+u7lRKrjBMmwsdHNywNS1OsYnAOk/YXSIHlQmjJxP6UoLQXMDdOy6HvxhBRfNd24ZEMOmeUsYexTCbxLziJdFufX/h+heeVrORUjSzUBJ8ebZB1X2jpQ+WDU6M891mK35AMJx5c6In2zMpSEmsTX6KtYdGrwZRerod/Vp0T5Zz9luz7HmKBmwPuq2q+UoaSYers2ueCTzspgTxv4olxfMXbmIB/nzHvhRlVwWUlHicFC0rnWLtHLjnIOvDkCB87Z7IFsLsikX6H6IgocLQipII5OikPzmq3ltnPD+y4vZOo9EgOunDN3DehCG7uyFIjHCIvufb6EaWO
+AYCPQJaYANUvzQlCevQGlHF9dEGM7uWiV6rHIHh5vF9teSb7fb1kvv7XIeR+ev6nMNl1TMhS61BuxELKsauvV1rudJzZKg9RNSk9OCe5/nvXrF9sWfLbrfurxEqoQ/o0gjKt5X5LhLvHXlUXd3ieL1GvM8rCKXiXrC5QNzs0nkBM26uorh6AS++WojHDZv1WxuBlDENf9CvH1BC2isSA0HSsPXQF8FUvkSzu8TecQsv9E3x19fY5BKrvUnixNHGZbCxQZo/mDlGQqw8YxxJ+wJZa8LmAdNezmwTjujktMUKF7WJxaddpMsdp3lKRNHPk3yF/JuxoSuWbPDhsDbhN8K/246Im7JwM1XKltRbW75tl1SU50rZcvW9YRgK+Kk1127n4h9ZF6hgYSR7LuUiTzx08yE710q3XB+dGm+rEXvomu1UmJbj78lzBQn7P/vqfgHz2uh3ZfVP0Pg0qQ5mRyqz0CQUEyfoOPZnGdsPTF/r8UN9HMC4ifSYdNpAAltg3ClG7AVBofs8He33l3kOc7t6Vq805wUeAcuQ0KtcpVH0mhA==
+
+### Kafka Source Connect 등록
+POST 127.0.0.1:8083/connectors
+Content-Type: application/json
+
+{
+  "name" : "my-source-connect",
+  "config" : {
+    "connector.class" : "io.confluent.connect.jdbc.JdbcSourceConnector",
+    "connection.url":"jdbc:mysql://localhost:3306/mydb",
+    "connection.user":"root",
+    "connection.password":"1111",
+    "mode": "incrementing",
+    "incrementing.column.name" : "id",
+    "table.whitelist":"users",
+    "topic.prefix" : "my_topic_",
+    "tasks.max" : "1",
+    "poll.interval.ms": 10000,
+    "topic.creation.default.replication.factor": 1,
+    "topic.creation.default.partitions": 1
+  }
+}
+
+### Kafka Source Connect 삭제
+DELETE 127.0.0.1:8083/connectors/my-source-connect
+
+### Kafka Source Connect 조회
+GET 127.0.0.1:8083/connectors
+
+### Kafka Source Connect 세부 조회
+GET 127.0.0.1:8083/connectors/my-source-connect/status
+
+### Kafka Sink Connect 등록 1
+POST 127.0.0.1:8083/connectors
+Content-Type: application/json
+
+{
+  "name":"my-sink-connect",
+  "config":{
+    "connector.class":"io.confluent.connect.jdbc.JdbcSinkConnector",
+    "connection.url":"jdbc:mysql://localhost:3306/mydb",
+    "connection.user":"root",
+    "connection.password":"1111",
+    "auto.create":"true",
+    "auto.evolve":"true",
+    "delete.enabled":"false",
+    "tasks.max":"1",
+    "topics":"my_topic_users"
+  }
+}
+
+### Kafka Sink Connect 등록 2
+POST 127.0.0.1:8083/connectors
+Content-Type: application/json
+
+{
+  "name":"my-order-sink-connect",
+  "config":{
+    "connector.class":"io.confluent.connect.jdbc.JdbcSinkConnector",
+    "connection.url":"jdbc:mysql://localhost:3306/mydb",
+    "connection.user":"root",
+    "connection.password":"1111",
+    "auto.create":"true",
+    "auto.evolve":"true",
+    "delete.enabled":"false",
+    "tasks.max":"1",
+    "topics":"orders"
+  }
+}
+
+### Kafka Source Connect 세부 조회
+GET 127.0.0.1:8083/connectors/my-order-sink-connect/status
+
+### Kafka Sink Connect 삭제
+DELETE 127.0.0.1:8083/connectors/my-order-sink-connect
