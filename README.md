@@ -5,11 +5,17 @@
 - Spring Cloud Gateway
 - Spring Cloud Bus
 - RabbitMQ
+- Apache Kafka
 - Spring Boot 3.2.3
 - Netflix Eureka Server
 - Spring Data JPA
 - Spring Security 6.2.3
 - OAuth 2.0
+- Resilience4J CircuitBreaker
+- Zipkin
+- Spring Cloud Sleuth
+- Prometheus
+- Grafana
 - Java 17
 - H2 Database
 - Docker
@@ -22,6 +28,15 @@
 ## RabbitMQ 실행 가이드
 - `cd /usr/local/sbin`
 - `./rabbitmq-sever`
+
+## Zipkin 실행 가이드
+- `java -jar zipkin.jar`
+
+## Prometheus 실행 가이드
+- `./prometheus --config.file=prometheus.yml`
+
+## Grafana 실행 가이드
+= `./bin/grafana-server`
 
 ## REFERENCE
 - 스프링 마이크로서비스 코딩 공작소 개정 2판 (SPRING MICROSERVICES IN ACTION 2ND ED.)

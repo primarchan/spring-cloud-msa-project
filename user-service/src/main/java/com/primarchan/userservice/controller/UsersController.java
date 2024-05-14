@@ -6,6 +6,7 @@ import com.primarchan.userservice.entity.UserEntity;
 import com.primarchan.userservice.service.UserService;
 import com.primarchan.userservice.vo.Greeting;
 import com.primarchan.userservice.dto.RequestUser;
+import io.micrometer.core.annotation.Timed;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -21,13 +22,15 @@ import java.util.List;
 @RestController
 @RequestMapping("/")
 @RequiredArgsConstructor
-public class UsersController {
+public class
+UsersController {
 
     private final Greeting greeting;
     private final Environment env;
     private final UserService userService;
 
-     @GetMapping("/health_check")
+    @Timed(value = "users.status", longTask = true)
+    @GetMapping("/users/health_check")
     public String status() {
         return String.format("It's Working in User Service"
                 + ", port(local.server.port)=" + env.getProperty("local.server.port")
@@ -37,7 +40,8 @@ public class UsersController {
     }
 
 
-     @GetMapping("/welcome")
+    @Timed(value = "users.welcome", longTask = true)
+    @GetMapping("/users/welcome")
     public String greeting() {
         return greeting.getMessage();
     }

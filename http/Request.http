@@ -10,11 +10,11 @@ Content-Type: application/json
 
 ### 전체 사용자 정보 조회
 GET http://localhost:8000/user-service/users
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhMDZmNzYwOC00Y2E4LTQzNGYtYmZhMy0yOTkyZDdjMjQ0N2UiLCJleHAiOjE3MTU3NTg2MDQsImlhdCI6MTcxNTY3MjIwNH0.Xm3noEEeg1rw7ZH7IHEME4vzKmc2m8ePhdLVPj9H4KEJknmH6ahKAsLe2tEXwjcV
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI3NmQxN2Q4Zi0wYTdlLTQyMTctYmExZi1iMmVhNDkzYTdhMzciLCJleHAiOjE3MTU3NjUzNDYsImlhdCI6MTcxNTY3ODk0Nn0.iTarYm-RJgbikJlV7ROnhwO1IjXpyVVaPV2riPzAKe2HtyD0KN-Y6xHKNtcdHkBN
 
 ### 사용자 정보 조회
-GET http://localhost:8000/user-service/users/a06f7608-4ca8-434f-bfa3-2992d7c2447e
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhMDZmNzYwOC00Y2E4LTQzNGYtYmZhMy0yOTkyZDdjMjQ0N2UiLCJleHAiOjE3MTU3NTg2MDQsImlhdCI6MTcxNTY3MjIwNH0.Xm3noEEeg1rw7ZH7IHEME4vzKmc2m8ePhdLVPj9H4KEJknmH6ahKAsLe2tEXwjcV
+GET http://localhost:8000/user-service/users/d4ee55cb-fb93-4257-ae44-b5d07ed8547b
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI1MWQxMWJjNC0yMWFkLTRjMTktOGEwZC1hYTNlNjcwN2Y5MjEiLCJleHAiOjE3MTU3NjIxODMsImlhdCI6MTcxNTY3NTc4M30.w-YKiGrFU1QbX9ToqclVtn03aM1NEimPC2yP4D9dl2o_mM8zzua6C4u94FDF-qDk
 
 ### 사용자 로그인 요청
 POST http://localhost:8000/user-service/login
@@ -29,23 +29,31 @@ Content-Type: application/json
 GET http://localhost:8000/catalog-service/catalogs
 
 ### 주문 생성
-POST http://localhost:8000/order-service/a06f7608-4ca8-434f-bfa3-2992d7c2447e/orders
+POST http://localhost:8000/order-service/51d11bc4-21ad-4c19-8a0d-aa3e6707f921/orders
 Content-Type: application/json
 
 {
   "productId": "CATALOG-0002",
-  "qty": 11,
+  "qty": 15,
   "unitPrice": 1000
 }
 
 ### 사용자 전체 주문 조회
-GET http://localhost:8000/order-service/db65f6bc-9e17-49d3-8d16-206bc1558720/orders
+GET http://localhost:8000/order-service/51d11bc4-21ad-4c19-8a0d-aa3e6707f921/orders
 
 ### API GATEWAY Actuator health 상태 요청
 GET http://localhost:8000/actuator/health
 
 ### USER-SEEVICE Actuator health 상태 요청
 GET http://localhost:8000/user-service/actuator/health
+
+### USER-SEEVICE Actuator health_check 요청
+GET http://localhost:8000/user-service/users/health_check
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI3NmQxN2Q4Zi0wYTdlLTQyMTctYmExZi1iMmVhNDkzYTdhMzciLCJleHAiOjE3MTU3NjUzNDYsImlhdCI6MTcxNTY3ODk0Nn0.iTarYm-RJgbikJlV7ROnhwO1IjXpyVVaPV2riPzAKe2HtyD0KN-Y6xHKNtcdHkBN
+
+### USER-SEEVICE Actuator welcome 요청
+GET http://localhost:8000/user-service/users/welcome
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI3NmQxN2Q4Zi0wYTdlLTQyMTctYmExZi1iMmVhNDkzYTdhMzciLCJleHAiOjE3MTU3NjUzNDYsImlhdCI6MTcxNTY3ODk0Nn0.iTarYm-RJgbikJlV7ROnhwO1IjXpyVVaPV2riPzAKe2HtyD0KN-Y6xHKNtcdHkBN
 
 ### USER-SEEVICE Actuator refresh 요청
 POST http://localhost:8000/user-service/actuator/refresh
