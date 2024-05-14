@@ -10,11 +10,11 @@ Content-Type: application/json
 
 ### 전체 사용자 정보 조회
 GET http://localhost:8000/user-service/users
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI1YjMzMjkxMi1mMTUxLTRlNzItYmEyNS01YTU1ZTY2YjVhYmEiLCJleHAiOjE3MTU1OTY5NzQsImlhdCI6MTcxNTUxMDU3NH0.ngEDbMYDYZRv2kGSPnN25aHScH1fTAagItkSZq0q9N5nTe1HnbvcNLCVV96lOqFt
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhMDZmNzYwOC00Y2E4LTQzNGYtYmZhMy0yOTkyZDdjMjQ0N2UiLCJleHAiOjE3MTU3NTg2MDQsImlhdCI6MTcxNTY3MjIwNH0.Xm3noEEeg1rw7ZH7IHEME4vzKmc2m8ePhdLVPj9H4KEJknmH6ahKAsLe2tEXwjcV
 
 ### 사용자 정보 조회
-GET http://localhost:8000/user-service/users/5b332912-f151-4e72-ba25-5a55e66b5aba
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiI1YjMzMjkxMi1mMTUxLTRlNzItYmEyNS01YTU1ZTY2YjVhYmEiLCJleHAiOjE3MTU1OTY5NzQsImlhdCI6MTcxNTUxMDU3NH0.ngEDbMYDYZRv2kGSPnN25aHScH1fTAagItkSZq0q9N5nTe1HnbvcNLCVV96lOqFt
+GET http://localhost:8000/user-service/users/a06f7608-4ca8-434f-bfa3-2992d7c2447e
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhMDZmNzYwOC00Y2E4LTQzNGYtYmZhMy0yOTkyZDdjMjQ0N2UiLCJleHAiOjE3MTU3NTg2MDQsImlhdCI6MTcxNTY3MjIwNH0.Xm3noEEeg1rw7ZH7IHEME4vzKmc2m8ePhdLVPj9H4KEJknmH6ahKAsLe2tEXwjcV
 
 ### 사용자 로그인 요청
 POST http://localhost:8000/user-service/login
@@ -29,7 +29,7 @@ Content-Type: application/json
 GET http://localhost:8000/catalog-service/catalogs
 
 ### 주문 생성
-POST http://localhost:8000/order-service/5b332912-f151-4e72-ba25-5a55e66b5aba/orders
+POST http://localhost:8000/order-service/a06f7608-4ca8-434f-bfa3-2992d7c2447e/orders
 Content-Type: application/json
 
 {
@@ -39,7 +39,7 @@ Content-Type: application/json
 }
 
 ### 사용자 전체 주문 조회
-GET http://localhost:8000/order-service/5b332912-f151-4e72-ba25-5a55e66b5aba/orders
+GET http://localhost:8000/order-service/db65f6bc-9e17-49d3-8d16-206bc1558720/orders
 
 ### API GATEWAY Actuator health 상태 요청
 GET http://localhost:8000/actuator/health
